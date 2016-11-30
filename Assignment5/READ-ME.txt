@@ -1,0 +1,13 @@
+/*
+* CSCI 325 - Computer Graphics
+* Aline Lais Gomes Tavares
+* Jeremy Greenburg
+* Assignment 5: Robot
+*/
+
+
+Functions
+
+	Mouse:
+		- Left: Change scene
+		- Right: quit

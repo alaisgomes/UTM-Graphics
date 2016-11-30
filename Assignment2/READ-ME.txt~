@@ -1,0 +1,17 @@
+* CSCI 325 - Computer Graphics
+* Aline Lais Gomes Tavares
+* Assignment 2: Triangles and User Input
+
+* Intructions to compile: make
+
+*Instructions to execute:
+./gasket <WIDTH> <HEIGHT> <MAX_N> <ANIMATION_FLAG>
+where: 	
+	<WIDTH>: Desired window WIDTH 					(default: 600px)
+	<HEIGHT>: desired window HEIGHT 				(default: 600px)
+	<MAX_N>: Maximum of depth of your Triangles 	(default: 7)
+	<ANIMATION_FLAG>: Possible options:				(defult: 0)
+			1: 		If the gasket will animate by itself and change colors with left click
+			0: 		If gasket will animate by mouse clicks only
+
+If you right click on the window, the window will close and the program will exit.

@@ -1,0 +1,25 @@
+/*
+* CSCI 325 - Computer Graphics
+* Aline Lais Gomes Tavares
+* Assignment 6: Room
+*/
+
+* Intructions to compile: make
+
+*Instructions to execute: ./room
+
+
+Functions
+
+	Keybord:
+		- E: deactivate lightening
+		- R: activate lightening
+		- I: Initial Position inside the room
+		- O: Outside position 
+		- Q: Quit
+		- Left/Right: Move camera -x/+x
+		- Up/Down: Move camera -z/+z
+		- A/S: move camera -y/+y
+
+	Mouse:
+		- Right: Quit

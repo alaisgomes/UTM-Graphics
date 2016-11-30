@@ -1,0 +1,34 @@
+# Makefile to build the flag program
+# Jeremy Greenburg
+# September 9th
+
+FLAGS = -lglut -lGL -lGLU -lX11 -lm 
+FMOD = -LResources/fmod/lib/x86_64 -lfmod
+COMPILER = g++
+TARGET = walker
+# It turns out that PATH was already an important system variable
+# And using PATH as a makefile variable causes things to break in fun and interestig ways
+# That was a fun thing to debug
+SO_PATH = $$PWD/Resources/fmod/lib/x86_64
+OUTPUT = -o $(TARGET)
+
+all: $(TARGET)
+
+$(TARGET): main.o Walker.o
+	$(COMPILER) $(OUTPUT) main.o Walker.o $(FMOD) $(FLAGS)
+
+main.o: main.cpp
+	$(COMPILER) -c main.cpp -Wall
+
+Walker.o: Walker.cpp Walker.h
+	$(COMPILER) -c Walker.cpp -Wall;
+
+#Music.o: Music.cpp Music.h
+#	$(COMPILER) -c Music.cpp -Wall
+
+run:
+	export LD_LIBRARY_PATH=$$LD_LIBRARY_PATH:$(SO_PATH); \
+./$(TARGET)
+
+clean:
+	rm *~ *o
